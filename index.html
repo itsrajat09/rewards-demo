@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PayNova Rewards - Claim your cashback</title>
+<style>
+body{margin:0;font:16px/1.5 system-ui,sans-serif;background:#eaf3ff;color:#102a43}
+.banner{background:#fff3cd;color:#664d03;padding:10px 16px;text-align:center;font-size:.9rem;border-bottom:1px solid #ffe69c}
+main{max-width:420px;margin:32px auto;background:#fff;border-radius:14px;padding:24px;box-shadow:0 2px 12px #0002}
+h1{font-size:1.4rem;margin:0 0 8px}
+label{display:block;margin:14px 0 4px;font-weight:600}
+input{width:100%;padding:10px;border:1px solid #bcccdc;border-radius:8px;font-size:1rem;box-sizing:border-box}
+button{margin-top:18px;width:100%;padding:12px;border:0;border-radius:8px;background:#00baf2;color:#fff;font-size:1rem;font-weight:600}
+#done{display:none;margin-top:14px;padding:10px;border-radius:8px;background:#e6f4ea;color:#14532d}
+footer{max-width:420px;margin:0 auto 32px;font-size:.8rem;color:#486581;text-align:center}
+</style>
+</head>
+<body>
+<div class="banner">TEST PAGE: made for the UPI Shield hackathon project. Not a real site. Nothing you type is saved or sent.</div>
+<main>
+  <h1>PayNova Rewards: Claim Rs 5000 cashback</h1>
+  <p>Congratulations! You have won a cashback reward. Verify your KYC and claim now. Offer expires in 10 minutes.</p>
+  <form id="f">
+    <label for="m">Mobile number</label>
+    <input id="m" inputmode="numeric" placeholder="10 digit number">
+    <label for="p">Enter your UPI PIN to receive the money</label>
+    <input id="p" inputmode="numeric" placeholder="UPI PIN">
+    <label for="o">Enter the OTP sent to your phone</label>
+    <input id="o" inputmode="numeric" placeholder="OTP">
+    <button type="submit">Claim cashback now</button>
+  </form>
+  <div id="done">This was a demo page. Nothing was sent. Never share your UPI PIN or OTP with anyone.</div>
+</main>
+<footer>UPI Shield demo fixture. PayNova is a made-up name, not a real company.</footer>
+<script>
+document.getElementById("f").addEventListener("submit", function (e) {
+  e.preventDefault();
+  this.reset();
+  document.getElementById("done").style.display = "block";
+});
+</script>
+</body>
+</html>
